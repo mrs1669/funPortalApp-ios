@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93D2DA3C551F4C8524784552 /* Pods_funPortalApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1E6DFE40D43D74A6F929CD /* Pods_funPortalApp_ios.framework */; };
 		E110371C28063F190013969E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110371B28063F190013969E /* AppDelegate.swift */; };
 		E110371E28063F190013969E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110371D28063F190013969E /* SceneDelegate.swift */; };
 		E110372028063F190013969E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110371F28063F190013969E /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00CE972EACF01EE8D2A3DE6C /* Pods-funPortalApp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funPortalApp-ios.debug.xcconfig"; path = "Target Support Files/Pods-funPortalApp-ios/Pods-funPortalApp-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		0D28CB1BE8B5F8736C257326 /* Pods-funPortalApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funPortalApp-ios.release.xcconfig"; path = "Target Support Files/Pods-funPortalApp-ios/Pods-funPortalApp-ios.release.xcconfig"; sourceTree = "<group>"; };
+		4F1E6DFE40D43D74A6F929CD /* Pods_funPortalApp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_funPortalApp_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E110371828063F190013969E /* funPortalApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "funPortalApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E110371B28063F190013969E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E110371D28063F190013969E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D2DA3C551F4C8524784552 /* Pods_funPortalApp_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DCE818452E533F5C03B970E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F1E6DFE40D43D74A6F929CD /* Pods_funPortalApp_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		889AB8BBBDBE9D4949719680 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00CE972EACF01EE8D2A3DE6C /* Pods-funPortalApp-ios.debug.xcconfig */,
+				0D28CB1BE8B5F8736C257326 /* Pods-funPortalApp-ios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E110370F28063F190013969E = {
 			isa = PBXGroup;
 			children = (
 				E110371A28063F190013969E /* funPortalApp-ios */,
 				E110371928063F190013969E /* Products */,
+				889AB8BBBDBE9D4949719680 /* Pods */,
+				2DCE818452E533F5C03B970E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E110372C28063F1A0013969E /* Build configuration list for PBXNativeTarget "funPortalApp-ios" */;
 			buildPhases = (
+				4DF6124E2208634D861A6CAE /* [CP] Check Pods Manifest.lock */,
 				E110371428063F190013969E /* Sources */,
 				E110371528063F190013969E /* Frameworks */,
 				E110371628063F190013969E /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DF6124E2208634D861A6CAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-funPortalApp-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E110371428063F190013969E /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		E110372D28063F1A0013969E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00CE972EACF01EE8D2A3DE6C /* Pods-funPortalApp-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +362,7 @@
 		};
 		E110372E28063F1A0013969E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D28CB1BE8B5F8736C257326 /* Pods-funPortalApp-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
